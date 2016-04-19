@@ -19,7 +19,7 @@ app.listen(app.get('port'), function() {
 });
 
 app.get('/webhook/', function (req, res) {
-  if (req.query['hub.verify_token'] === 'messenger_bots_token') {
+  if (req.query['hub.verify_token'] === '<TODO : Zelf in vullen>') {
     res.send(req.query['hub.challenge']);
   }
   res.send('Error, wrong validation token' + req.query['hub.challenge'] + 'HELLLO');
@@ -42,7 +42,7 @@ app.post('/webhook/', jsonParser, function(req, res) {
   res.sendStatus(200);
 });
 
-var token = "CAALh5TgiZCA8BACwyZB6YD9lvCFzOMN1a8sHbtvOaFEjMlHgmidzD3KbKKYvHrGNZAtLUqGUoOioX7Rr4ThxyNEM5r0wY75CcT8Q0erZBJLB7HtS7M1GTQx5VjsiVRZBiwFQcDtp7Q3RAGpE4VRwQqZBSvY2Mng6S2ZAF81ZA0JZATYJepdDZBIIFT0Q6ZCPkZBBBXQZD";
+var token = '<TODO : Zelf in vullen>';
 
 function sendTextMessage(sender, text, temp) {
   def_val = '{"text":"foutje bedankt text: geen waarde aan temp mee gegeven"}';     
